@@ -1,2 +1,2 @@
 # DevelopmentTechnologyCourses
-记录和整理对 开发技术课程学习的笔记
+该分支 记录 和 整理 关于 微服务 和  DDD 设计模式的 学习
