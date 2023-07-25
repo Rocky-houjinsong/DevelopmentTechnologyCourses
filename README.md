@@ -1,2 +1,2 @@
 # DevelopmentTechnologyCourses
-记录和整理对 开发技术课程学习的笔记
+本 分支 ,记录 和整理 关于  .NET  MAUI 开发技术的学习
