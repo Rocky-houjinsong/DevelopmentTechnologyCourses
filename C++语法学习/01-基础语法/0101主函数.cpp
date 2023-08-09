@@ -21,6 +21,9 @@ int main(char* argc[],int argv)          // main函数, --- 程序唯一入口; 
 	cout << d <<endl;
 	bool  flag = false;  //布尔类型
 	
+	// cout 用来输出, 谁是输入呢? cin 
+	// ;  语句的分隔符;
+	
 	return 0;          // 函数必须有返回值 ;(至少一个输入,可以没有输入)
 }
 
