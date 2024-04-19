@@ -8,8 +8,6 @@
  *                                    *
  **************************************/
 
-
-
 #ifndef MERGESQLIST_H
 #define MERGESQLIST_H
 
@@ -28,3 +26,4 @@ void MergeSqList_2(SqList La, SqList Lb, SqList *Lc);
 ┗━━━━━━━━━━━━━━━━━━━━━*/
 
 #endif
+

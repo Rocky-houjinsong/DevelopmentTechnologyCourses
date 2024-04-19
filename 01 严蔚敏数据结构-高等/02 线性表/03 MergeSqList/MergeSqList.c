@@ -18,6 +18,7 @@
 ╚════*/
 void MergeSqList_1(SqList La, SqList Lb, SqList *Lc)	//调用顺序表函数进行合并 
 {
+	/*迭代三要素:边界条件,迭代变量,迭代元素值*/
 	int La_len, Lb_len; 
 	int i, j, k;
 	LElemType_Sq ai, bj;
@@ -95,3 +96,4 @@ void MergeSqList_2(SqList La, SqList Lb, SqList *Lc)
 }
 
 #endif
+

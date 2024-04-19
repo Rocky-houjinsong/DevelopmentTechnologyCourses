@@ -1,3 +1,5 @@
+// INC_03_SELECTION_SORT_GENERATE_TEST_CASE_SORTTESTHELPER_H
+
 #ifndef  INC_03_SELECTION_SORT_GENERATE_TEST_CASE_SORTTESTHELPER_H
 #define  INC_03_SELECTION_SORT_GENERATE_TEST_CASE_SORTTESTHELPER_H
 #include <iostream>  //
@@ -17,6 +19,7 @@ namespace SortTestHelper{
 		srand(time(NULL));
 		for(int i = 0; i < n; i++)
 		{
+			//CC:获取 余数 一定在  特定范围内 (L,R)
 			arr[i] = rand() % (rangeR - rangeL + 1) + rangeL;
 		}
 		

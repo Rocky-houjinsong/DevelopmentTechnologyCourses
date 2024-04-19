@@ -5,6 +5,7 @@
  * 内  容: 顺序表归并相关函数测试     *
  *                                    *
  **************************************/
+
 #include <stdio.h>
 #include "MergeSqList.c"				//**▲02 线性表**//
 
@@ -48,3 +49,4 @@ void PrintElem(LElemType_Sq e)
 {
 	printf("%d ", e);
 }
+

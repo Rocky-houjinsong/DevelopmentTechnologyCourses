@@ -11,7 +11,7 @@
 #define SEQUENCELIST_C
 
 #include "SequenceList.h"   //*02 线性表*/
-
+#include <assert.h>
 
 ////调试版本, assert 生效 --- DeBug Version
 //#ifdef NDEBUG
@@ -19,10 +19,10 @@
 //#endif
 
 //发布版本  assert 不生效  --- Release Version
-#ifdef NDEBUG
-#define NDEBUG
-#endif
-#include <assert.h>
+//#ifdef NDEBUG
+//#define NDEBUG
+//#endif
+//#include <assert.h>
 
  /*════╗
  ║算法2.3 ║
@@ -103,7 +103,7 @@ Status PriorElem_Sq(SqList L, LElemType_Sq cur_e, LElemType_Sq* pre_e) {
 	if (L.length == 0){    // 空表直接跳出, 非空表 继续执行
 		return ERROR;
 	}
-	assert(L.length > 0); // 如果为空表, 直接跳出, 不继续执行
+//	assert(L.length > 0); // 如果为空表, 直接跳出, 不继续执行
 	int i = 1;    // 迭代变量 & 位置
 	if (L.elem[0] != cur_e){     // 第一个节点 无前驱;   CC:SqList  中的元素 需 唯一非重复, 否则可能出现  (2,1,2) 此时 的判定就会有误
 		while (i < L.length && L.elem[i] != cur_e) {

@@ -7,7 +7,7 @@
  ***************************************/
 
 #include <stdio.h>	
-#include "SequenceList.h"    
+#include "SequenceList.c"    
 // #include "SequenceList.h"  正常理应使用这个, 但直接使用c文件 这里避免报错
 
 /*测试调用的函数原型*/

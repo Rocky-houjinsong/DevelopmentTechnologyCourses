@@ -15,8 +15,8 @@
 
 void Union(SqList *La, SqList Lb){
 	int La_len, Lb_len;
-	int i;
-	LElemType_Sq e;
+	int i;				// 循环变量
+	LElemType_Sq e;     // 承接特定元素返回,用于插入
 	
 	La_len = ListLength_Sq(*La);
 	Lb_len = ListLength_Sq(Lb);

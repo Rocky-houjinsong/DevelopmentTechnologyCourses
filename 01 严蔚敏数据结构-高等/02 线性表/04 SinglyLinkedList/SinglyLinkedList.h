@@ -17,14 +17,14 @@
 
 /* 单链表类型定义 */
 #ifndef BANKQUEUING_H					/*后续的模拟银行排队算法中，此类型需要重新定义*/
-typedef int LElemType_L;
+typedef int LElemType_L;		//节点中的数据 
 
 /* 单链表结构体 */
 typedef struct LNode
 {
 	LElemType_L 	data;
 	struct LNode 	*next;
-}LNode;
+}LNode;								// 节点
 typedef LNode* 		LinkList;		//指向单链表结点的指针 
 #endif
 

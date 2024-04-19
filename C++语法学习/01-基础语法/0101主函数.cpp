@@ -1,4 +1,4 @@
-#include <iostream>   // 头文件 --- 导入封装好的函数
+#include <iostream>   					// 头文件 --- 导入封装好的函数
 /*
   头文件中 特殊区块(区域) --- 避免与其他文件重名无法识别风险
   cout,endl等 命令都存储里面,无std而单独使用cout则报错

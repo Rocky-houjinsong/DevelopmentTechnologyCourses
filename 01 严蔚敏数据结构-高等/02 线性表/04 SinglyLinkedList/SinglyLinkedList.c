@@ -34,7 +34,13 @@ LinkList	**L;
 (狗)->成员；
 */
 
-Status InitList_L(LinkList *L)  
+//LinkList 是一个别名，代表了指向单链表节点的    指针类型。
+//"LinkList *L" 声明了一个名为 L 的指针变量，它指向 LinkList 类型的对象。
+//"LinkList L" 中的 "" 符号表示解引用操作符，它用于访问指针所指向的对象。在这里，"*L" 表示 L 指针指向的对象是一个 LinkList 类型的对象。
+//因此，"LinkList *L" 可以理解为 L 是一个指向 LinkList 对象的指针变量，通过 L 可以操作（读取、修改）该 LinkList 对象。
+//总结起来，"LinkList *L" 是声明了一个指向 LinkList 类型对象的指针变量 L。
+
+Status InitList_L(LinkList *L)  				// 指向 LinkList 类型的指针的指针
 {
 	(*L) = (LinkList)malloc(sizeof(LNode)); 	// *L 存储指向结点的地址；
 	if(!(*L))
@@ -49,15 +55,15 @@ Status ClearList_L(LinkList L)			//保留头结点
 {	
 	LinkList pre, p;
 	
-	if(!L)
+	if(!L)				// 如果L为空链表,返回报错 判定L是否为NULL ; "!L" 表示对指针 L 进行取反操作，即如果 L 是一个空指针，则结果为真（非零）；
 		return ERROR;
 	
-	pre = L->next;
+	pre = L->next;  // L是头结点, L->next是 第一个 有数据的节点
 	
-	while(pre)
+	while(pre)  		//YY(隐喻):吃甘蔗, 咬到下一节,才吃掉当前节点 ,迟到所有汁水(数据元素)的节点
 	{
 		p = pre->next;
-		free(pre);
+		free(pre);    //Aim(目的):释放有数据元素的 节点内存
 		pre = p;
 	}
 	
@@ -68,9 +74,9 @@ Status ClearList_L(LinkList L)			//保留头结点
 
 void DestroyList_L(LinkList *L)			//销毁所有结点 
 {
-	LinkList p = *L;	//p和L一样也是一个二级指针，这里的*的作用是取内容；
+	LinkList p = *L;	//p和L一样也是一个二级指针，这里的*的作用是取内容 此处存储的是 头结点；
 	
-	while(p)
+	while(p)		//YY(隐喻):对于每一个节点都释放,包括 头结点
 	{
 		p = (*L)->next;
 		free(*L);
@@ -91,7 +97,7 @@ int ListLength_L(LinkList L)
 	LinkList p;
 	int i;
 	
-	if(L)
+	if(L)				//判定L是否是 空链表
 	{
 		i = 0;
 		p = L->next;	 //指向第一个结点；
@@ -99,10 +105,12 @@ int ListLength_L(LinkList L)
 		{
 			i++;
 			p = p->next;
-		}		
+		}
+		return i;
 	}
 	
-	return i;
+	return INFEASIBLE;  	//值为 -1  长度一定是  大于0 的正整数存在负数 一定是错误的
+	//return i;   //QA如果 是空链表, i没有赋值,此时i的值是多少?   未初始化的局部变量的值是不确定的
 }
 
 /*════╗

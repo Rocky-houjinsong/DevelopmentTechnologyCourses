@@ -1,6 +1,6 @@
 #include <stdio.h>	  // 标准 输入 输出功能
 #include <stdlib.h>   // 常用的函数和常量,处理 字符串,内存分配等
-#include<io.h>
+#include <io.h>
 #include <math.h>
 #include <time.h>
 
